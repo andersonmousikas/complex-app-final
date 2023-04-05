@@ -1,11 +1,11 @@
-const app = express()
+const express = require('express')
 const csrf = require('csurf')
 const markdown = require('marked')
-const express = require('express')
 const flash = require('connect-flash')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
 const sanitizeHTML = require('sanitize-html')
+const app = express()
 
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
